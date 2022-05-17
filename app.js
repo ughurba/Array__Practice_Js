@@ -1,23 +1,25 @@
+
+
+
+
+
+
 // Создайте массив styles с элементами «Джаз» и «Блюз».
+let styles = ['Джаз', 'Блюз','Arif','orxan'];
+
 // Добавьте «Рок-н-ролл» в конец.
-// Замените значение в середине на «Классика». Ваш код для поиска значения в середине должен работать для массивов с любой длиной.
-// Удалите первый элемент массива и покажите его.
-// Вставьте Рэп и Регги в начало массива.
-
-let styles = ['Джаз', 'Блюз','Arif','orxan','aqil'];
-
 styles.push('Rok-n-roll');
 console.log(styles)
 
-for(i = 0; i<styles.length ; i++){
+// Замените значение в середине на «Классика». Ваш код для поиска значения в середине должен работать для массивов с любой длиной.
+styles[Math.floor((styles.length - 1) / 2)] = "Классика";
+console.log(styles);
 
-    let arrayLength = styles.length / 2
-    let centerSizeArray = Math.trunc(arrayLength);
+// Удалите первый элемент массива и покажите его.
+let removeElmArray = styles.shift();
+console.log(removeElmArray);
 
-    console.log(centerSizeArray)
 
-    styles[centerSizeArray] = 'klassika'
-     
-    console.log(styles)
-  
-}
+// Вставьте Рэп и Регги в начало массива.
+styles.unshift('Rep', 'Reqqi')
+console.log(styles);
